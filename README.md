@@ -1,10 +1,10 @@
 # 📦 StockFlow Inventory Management System
 
-A professional PostgreSQL database project that simulates a real-world inventory management system. The project demonstrates relational database design, SQL development, stored functions, triggers, views, indexing, and query optimization.
+A professional PostgreSQL database project that simulates a real-world inventory management system. This project demonstrates relational database design, SQL development, views, stored functions, triggers, indexing, and query optimization.
 
 ---
 
-## Table of Contents
+# Table of Contents
 
 - [Overview](#overview)
 - [Features](#features)
@@ -29,9 +29,10 @@ A professional PostgreSQL database project that simulates a real-world inventory
 
 The **StockFlow Inventory Management System** is a PostgreSQL database project designed to manage products, suppliers, warehouses, inventory, customers, orders, and payments.
 
-The project follows database normalization principles and demonstrates the use of:
+The project demonstrates:
 
 - Relational database design
+- Database normalization
 - Primary and foreign keys
 - Constraints
 - Views
@@ -40,7 +41,7 @@ The project follows database normalization principles and demonstrates the use o
 - Indexes
 - Query optimization
 
-This project was built as part of my software development portfolio to demonstrate practical SQL and PostgreSQL skills for backend development.
+This project was developed as part of my software development portfolio to demonstrate practical PostgreSQL and SQL skills for backend development.
 
 ---
 
@@ -104,8 +105,6 @@ The database contains **9 relational tables**.
 
 ## Views
 
-The project contains four reporting views:
-
 - product_details_view
 - inventory_report_view
 - order_details_view
@@ -119,8 +118,6 @@ The project contains four reporting views:
 
 Calculates the total inventory value across all warehouses.
 
-Example:
-
 ```sql
 SELECT calculate_inventory_value();
 ```
@@ -129,13 +126,13 @@ SELECT calculate_inventory_value();
 
 ## Triggers
 
-The project includes triggers that automatically maintain inventory consistency whenever order records are created or modified.
+Automatically updates inventory quantities whenever new order items are inserted, helping maintain inventory consistency.
 
 ---
 
 ## Indexes
 
-Indexes have been created to improve database performance on frequently searched columns and foreign key relationships.
+Indexes have been created to improve query performance on frequently searched columns and foreign key relationships.
 
 Indexed tables include:
 
@@ -181,6 +178,50 @@ SELECT calculate_inventory_value();
 
 ---
 
+# Screenshots
+
+## Inventory Report
+
+![Inventory Report](screenshots/inventory_report.png)
+
+---
+
+## Order Details
+
+![Order Details](screenshots/order_details.png)
+
+---
+
+## Low Stock Report
+
+![Low Stock Report](screenshots/low_stock_view.png)
+
+---
+
+## Inventory Value Function
+
+![Inventory Value](screenshots/inventory_value.png)
+
+---
+
+## Database Tables
+
+![Tables](screenshots/tables.png)
+
+---
+
+## Database Views
+
+![Views](screenshots/views.png)
+
+---
+
+## Indexes
+
+![Indexes](screenshots/indexes.png)
+
+---
+
 # How to Run
 
 ### 1. Install PostgreSQL
@@ -193,9 +234,9 @@ Install PostgreSQL and pgAdmin.
 CREATE DATABASE stockflow_db;
 ```
 
-### 3. Open Query Tool
+### 3. Connect to the Database
 
-Connect to **stockflow_db**.
+Open pgAdmin and connect to **stockflow_db**.
 
 ### 4. Execute the SQL Script
 
@@ -208,41 +249,38 @@ stockflow_database.sql
 This will automatically create:
 
 - Tables
-- Constraints
 - Relationships
+- Constraints
 - Views
-- Functions
+- Stored Functions
 - Triggers
 - Indexes
 - Sample Data
 
 ### 5. Run Example Queries
 
-Test the database using the example queries above.
+Execute the example queries above to explore the database.
 
 ---
 
 # Project Structure
 
-```
+```text
 StockFlow-Inventory-System/
 │
 ├── README.md
 ├── LICENSE
 ├── stockflow_database.sql
 │
-├── screenshots/
-│   ├── erd.png
-│   ├── tables.png
-│   ├── views.png
-│   ├── indexes.png
-│   ├── inventory_report.png
-│   ├── low_stock.png
-│   ├── order_details.png
-│   └── inventory_value.png
-│
-└── docs/
-    └── project_description.pdf
+└── screenshots/
+    ├── erd.png
+    ├── tables.png
+    ├── views.png
+    ├── indexes.png
+    ├── inventory_report.png
+    ├── low_stock_view.png
+    ├── order_details.png
+    └── inventory_value.png
 ```
 
 ---
@@ -251,13 +289,13 @@ StockFlow-Inventory-System/
 
 Potential future enhancements include:
 
+- REST API integration
 - User authentication
 - Role-based access control
 - Purchase order management
 - Sales analytics
 - Supplier analytics
 - Barcode integration
-- REST API using Node.js
 - Docker deployment
 - Cloud database deployment
 - Web dashboard
@@ -284,4 +322,4 @@ https://www.linkedin.com/in/hussein-almoadhen/
 
 This project is licensed under the **MIT License**.
 
-See the **LICENSE** file for details.
+See the **LICENSE** file for more information.
