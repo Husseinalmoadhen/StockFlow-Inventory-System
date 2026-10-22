@@ -1,4 +1,4 @@
-# 📦 StockFlow Inventory Management System
+# StockFlow Inventory Management System
 
 A professional PostgreSQL database project that simulates a real-world inventory management system. This project demonstrates relational database design, SQL development, views, stored functions, triggers, indexing, and query optimization.
 
